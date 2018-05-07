@@ -67,13 +67,13 @@ Player.prototype.handleInput=function(keyPress){
 if(keyPress=='left' && this.x>0){
   this.x-=101;
 }
-else if (keyPress=='right' && this.x<505){
+if (keyPress=='right' && this.x<505){
   this.x+=101;
 }
-else if (keyPress=='up' && this.y>0){
+if (keyPress=='up' && this.y>0){
   this.y-=83;
 }
-else if (keyPress=='down' && this.y<505){
+if (keyPress=='down' && this.y<505){
   this.y+=83;
 }
 };
