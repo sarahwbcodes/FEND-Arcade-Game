@@ -17,7 +17,7 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    if(this.x>ctx.canvas.width){
+    if(this.x>505){
       this.x=0;
       this.speed= (Math.ceil(Math.random()*450)+1);
       //(Math.floor(Math.random()*100)+200);
@@ -37,8 +37,8 @@ Enemy.prototype.render = function() {
 };
 
 // Now write your own player class
-var Player = function(x,y){
-this.sprite = 'images/char-horn-girl.png';
+var Player = function(){
+this.sprite = 'images/char-boy.png';
 //starting coordinates
 this.x=200;
 this.y=400;
@@ -64,16 +64,16 @@ Player.prototype.render = function() {
 
 //handleInput
 Player.prototype.handleInput=function(keyPress){
-if(keyPress=='left' && this.x>0){
+if(keyPress=='left' && this.x > 0){
   this.x-=101;
 }
-if (keyPress=='right' && this.x<505){
+if (keyPress=='right' && this.x < 305){
   this.x+=101;
 }
-if (keyPress=='up' && this.y>0){
+if (keyPress=='up' && this.y > 0){
   this.y-=83;
 }
-if (keyPress=='down' && this.y<505){
+if (keyPress=='down' && this.y < 225){
   this.y+=83;
 }
 };
