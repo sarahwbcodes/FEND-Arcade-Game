@@ -64,16 +64,16 @@ Player.prototype.render = function() {
 
 //handleInput
 Player.prototype.handleInput=function(keyPress){
-if(keyPress=='left' && this.x > 0){
+if(keyPress=='a' && this.x > 0){
   this.x-=101;
 }
-if (keyPress=='right' && this.x < 305){
+if (keyPress=='d' && this.x < 305){
   this.x+=101;
 }
-if (keyPress=='up' && this.y > 0){
+if (keyPress=='w' && this.y > 0){
   this.y-=83;
 }
-if (keyPress=='down' && this.y < 225){
+if (keyPress=='s' && this.y < 225){
   this.y+=83;
 }
 };
@@ -93,10 +93,10 @@ var player = new Player(200,400);
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
-        37: 'left',
-        38: 'up',
-        39: 'right',
-        40: 'down'
+        37: 'a',
+        38: 'w',
+        39: 'd',
+        40: 's'
     };
 
     player.handleInput(allowedKeys[e.keyCode]);
